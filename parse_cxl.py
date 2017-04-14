@@ -15,4 +15,10 @@ for child in root:
     res_dict['attrib'] = child.attrib
     root_children.append(res_dict)
 
+# test appending node to elementtree
+for child in root:
+  if child.tag == '{http://cmap.ihmc.us/xml/cmap/}map':
+    new = xml.etree.ElementTree.Element("new-item", name="Picolina")
+    child.append(new)
+
 e.write('output.cxl')
