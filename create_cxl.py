@@ -15,6 +15,8 @@ concepts = []
 try:
     reader = csv.reader(f)
     row_count = 0
+    
+    #build list of unique concepts from CSV data
     for row in reader:
         if row_count != 0:
           subj = row[0]
@@ -32,11 +34,17 @@ finally:
 e = ElementTree.parse('template.cxl')
 root = e.getroot()
 
-# add concept nodes to the elementtree
+children = []
+
 for child in root:
-  if child.tag == '{http://cmap.ihmc.us/xml/cmap/}map':
-    for concept in concepts:
-      new = ElementTree.Element("concept", label=concept)
-      child.append(new)
+  children.append(child)
+
+print children
+
+concept_list = root[1][0]
+
+for concept in concepts:
+  new = ElementTree.Element("concept", label=concept)
+  concept_list.append(new)
 
 e.write('output.cxl')
