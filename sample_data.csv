@@ -1,0 +1,5 @@
+"Subject","Object","Relationship","Source"
+people,food,eat,wikipedia
+people,food,grow,NIFA
+companies,food,grow,http://google.com
+companies,food,sell,http://wikipedia.org
