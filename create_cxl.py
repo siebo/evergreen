@@ -2,6 +2,11 @@ import csv
 import sys
 from xml.etree import ElementTree
 
+ElementTree.register_namespace('', "http://cmap.ihmc.us/xml/cmap/")
+ElementTree.register_namespace('dcterms', "http://purl.org/dc/terms/")
+ElementTree.register_namespace('dc', "http://purl.org/dc/elements/1.1/")
+ElementTree.register_namespace('vcard', "http://www.w3.org/2001/vcard-rdf/3.0#")
+
 # Load CSV data
 f = open(sys.argv[1], 'rt')
 
