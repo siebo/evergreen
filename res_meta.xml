@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<res-meta>
+    <dc:title>Test Concept Map</dc:title>
+    <dc:creator>
+        <vcard:FN>John Smith</vcard:FN>
+        <vcard:EMAIL>user@domain.com</vcard:EMAIL>
+        <vcard:ORG>
+            <vcard:Orgname>Company, Inc.</vcard:Orgname>
+        </vcard:ORG>
+    </dc:creator>
+    <dc:contributor>
+        <vcard:FN>John Smith</vcard:FN>
+        <vcard:EMAIL>user@domain.com</vcard:EMAIL>
+        <vcard:ORG>
+            <vcard:Orgname>Company, Inc.</vcard:Orgname>
+        </vcard:ORG>
+    </dc:contributor>
+    <dcterms:rightsHolder>
+        <vcard:FN>John Smith</vcard:FN>
+        <vcard:EMAIL>user@domain.com</vcard:EMAIL>
+        <vcard:ORG>
+            <vcard:Orgname>Company, Inc.</vcard:Orgname>
+        </vcard:ORG>
+    </dcterms:rightsHolder>
+    <dcterms:created>2017-04-13T23:28:24-07:00</dcterms:created>
+    <dcterms:modified>2017-04-13T23:28:24-07:00</dcterms:modified>
+    <dc:language>en</dc:language>
+    <dc:format>x-cmap/x-storable</dc:format>
+    <dc:publisher>FIHMC CmapTools 6.02</dc:publisher>
+    <dc:extent>3480 bytes</dc:extent>
+    <dc:source>cmap:1R78ZT2DV-1JPT4D9-1:1R78ZT4LC-2DT8LZ6-Z:1R78ZVLF0-12L4C3Z-NR</dc:source>
+</res-meta>
+
+<acl-info inherit="false">
+  <ldap-acl-entry user-id="UC Davis" user-dn="uid=2b0f6521-911c-4f00-88e2-f0e5fc32b01f,ou=users,dc=cmapcloud,dc=ihmc,dc=us">
+    <permission id="admin"/>
+  </ldap-acl-entry>
+  <acl-entry user-id="guest" password="guest">
+    <permission id="read"/>
+    <permission id="add_modify_delete_resources"/>
+    <permission id="modify_delete_folder"/>
+    <permission id="annotate"/>
+  </acl-entry>
+</acl-info>

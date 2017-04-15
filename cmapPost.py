@@ -16,6 +16,11 @@ folderID =  sys.argv[1]
 username = sys.argv[2]
 password = sys.argv[3]
 
+
+# Load res meta
+f = open('res_meta.xml')
+res_meta = f.read()
+
 # Load CSV data
 f = open(sys.argv[4], 'rt')
 data = f.read()
@@ -24,12 +29,12 @@ data = f.read()
 # the Cmap and getting back the token ID which is used in the subsequent commands
 command = '/?cmd=begin.creating.resource'
 start_url = '%s%s%s' % (baseURL, folderID, command)
-start_req = requests.post(start_url, auth=(username, password), allow_redirects=True)
+start_req = requests.post(start_url, auth=(username, password), allow_redirects=True, data=res_meta)
 resourceID = start_req.text
 print resourceID
 
 # Create the resource, passing the CXL file
-command = '/?cmd=begin.creating.resource'
+command = '/?cmd=write.resource.part'
 create_url = '%s%s%s&partname=cmap&mimetype=%s' % (baseURL, resourceID, command, mime_type)
 create_req = requests.post(create_url, auth=(username, password), allow_redirects=True, data=data)
 print create_req.text
