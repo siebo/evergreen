@@ -21,9 +21,6 @@ def createCmapID():
   return new_id
 
 
-print createCmapID()
-
-
 # Load CSV data
 f = open(sys.argv[1], 'rt')
 
@@ -56,12 +53,18 @@ children = []
 for child in root:
   children.append(child)
 
-print children
-
 concept_list = root[1][0]
 
+concept_dict = {}
+
 for concept in concepts:
-  new = ElementTree.Element("concept", label=concept)
+  cid = createCmapID()
+  concept_dict[cid] = concept
+
+for item in concept_dict.items():
+  cid = item[0]
+  label = item[1]
+  new = ElementTree.Element("concept", label=concept, id=cid)
   concept_list.append(new)
 
 e.write('output.cxl')
