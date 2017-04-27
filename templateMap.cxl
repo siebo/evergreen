@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns:dcterms="http://purl.org/dc/terms/" xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+    <res-meta>
+        <dc:title>testMap</dc:title>
+        <dc:creator>
+            <vcard:FN>Matthew Lange</vcard:FN>
+        </dc:creator>
+        <dc:contributor>
+            <vcard:FN>Matthew Lange</vcard:FN>
+            <vcard:EMAIL>mclange@ucdavis.edu</vcard:EMAIL>
+            <vcard:ORG>
+                <vcard:Orgname>UC Davis</vcard:Orgname>
+            </vcard:ORG>
+        </dc:contributor>
+        <dcterms:rightsHolder>
+            <vcard:FN>Matthew Lange</vcard:FN>
+        </dcterms:rightsHolder>
+        <dcterms:created>2017-04-26T21:49:53-07:00</dcterms:created>
+        <dcterms:modified>2017-04-26T21:49:53-07:00</dcterms:modified>
+        <dc:language>en</dc:language>
+        <dc:format>x-cmap/x-storable</dc:format>
+        <dc:publisher>FIHMC CmapTools 6.00.4</dc:publisher>
+        <dc:extent>4888 bytes</dc:extent>
+    </res-meta>
+    <map width="716" height="395">
+        <concept-list>
+            <concept id="1QY4LGY41-2JS6PX-8KK" label="Simulation"/>
+            <concept id="1QY4LJZXX-1RRYQ51-8R0" label="current state&#xa;estimates"/>
+            <concept id="1QY4LMWHY-17TPQD3-901" label="thermal&#xa;(stress)"/>
+            <concept id="1QY4LP6N1-13VL0PM-91J" label="microwave&#xa;(hydrology)"/>
+            <concept id="1QY4LMFZS-1VJDNM3-8Y7" label="remote&#xa; sensing"/>
+            <concept id="1QY4LHN47-15FNJ6C-8NG" label="biophysical &#xa;models"/>
+            <concept id="1QY4LH2NC-2D0NLK0-8L8" label="crop &#xa;models"/>
+            <concept id="1QY4LKPJJ-1T5BV86-8T0" label="prediction&#xa;(seasonal, climate change)"/>
+            <concept id="1QY4LPRCF-1BT4QKN-92V" label="in-site"/>
+            <concept id="1QY4LLN2Z-1RG1DTM-8VV" label="Observation"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="1QY4LMWJ0-N1KRBN-904" label="has"/>
+            <linking-phrase id="1QY4LH2NF-11ZW3MH-8LC" label="has &#xa;type"/>
+            <linking-phrase id="1QY4LLN31-1LDHXCL-8VY" label="forcing/driving variables"/>
+            <linking-phrase id="1QY4LJZXZ-QV9JBB-8R3" label="has"/>
+            <linking-phrase id="1QY4LMFZV-1QH7NP7-8YB" label="has&#xa;type"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection id="1QY4LLN32-14PCMM-8W6" from-id="1QY4LLN31-1LDHXCL-8VY" to-id="1QY4LLN2Z-1RG1DTM-8VV"/>
+            <connection id="1QY4LJZY0-1WS36H1-8R6" from-id="1QY4LHN47-15FNJ6C-8NG" to-id="1QY4LJZXZ-QV9JBB-8R3"/>
+            <connection id="1QY4LH2QV-5BQFCG-8LH" from-id="1QY4LGY41-2JS6PX-8KK" to-id="1QY4LH2NF-11ZW3MH-8LC"/>
+            <connection id="1QY4LKPJK-1GQY215-8T3" from-id="1QY4LJZXZ-QV9JBB-8R3" to-id="1QY4LKPJJ-1T5BV86-8T0"/>
+            <connection id="1QY4LP6N4-1WJ7T7B-91M" from-id="1QY4LMWJ0-N1KRBN-904" to-id="1QY4LP6N1-13VL0PM-91J"/>
+            <connection id="1QY4LLN32-K2508V-8W1" from-id="1QY4LGY41-2JS6PX-8KK" to-id="1QY4LLN31-1LDHXCL-8VY"/>
+            <connection id="1QY4LHN49-1JFP3QF-8NK" from-id="1QY4LH2NF-11ZW3MH-8LC" to-id="1QY4LHN47-15FNJ6C-8NG"/>
+            <connection id="1QY4LJZY1-SKQWLJ-8RD" from-id="1QY4LJZXZ-QV9JBB-8R3" to-id="1QY4LJZXX-1RRYQ51-8R0"/>
+            <connection id="1QY4LPRCH-1QW0P04-92Y" from-id="1QY4LMWJ0-N1KRBN-904" to-id="1QY4LPRCF-1BT4QKN-92V"/>
+            <connection id="1QY4LMFZW-NMMFFH-8YM" from-id="1QY4LMFZV-1QH7NP7-8YB" to-id="1QY4LMFZS-1VJDNM3-8Y7"/>
+            <connection id="1QY4LH2QV-2B09NYP-8LP" from-id="1QY4LH2NF-11ZW3MH-8LC" to-id="1QY4LH2NC-2D0NLK0-8L8"/>
+            <connection id="1QY4LMFZW-G48CR5-8YF" from-id="1QY4LLN2Z-1RG1DTM-8VV" to-id="1QY4LMFZV-1QH7NP7-8YB"/>
+            <connection id="1QY4LMWJ1-1Y8S7R9-907" from-id="1QY4LMFZS-1VJDNM3-8Y7" to-id="1QY4LMWJ0-N1KRBN-904"/>
+            <connection id="1QY4LMWJ2-1WQZJ61-90F" from-id="1QY4LMWJ0-N1KRBN-904" to-id="1QY4LMWHY-17TPQD3-901"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1QY4LGY41-2JS6PX-8KK" x="79" y="166" width="80" height="25"/>
+            <concept-appearance id="1QY4LJZXX-1RRYQ51-8R0" x="585" y="163" width="94" height="39"/>
+            <concept-appearance id="1QY4LMWHY-17TPQD3-901" x="552" y="320" width="63" height="42"/>
+            <concept-appearance id="1QY4LP6N1-13VL0PM-91J" x="569" y="388" width="87" height="42"/>
+            <concept-appearance id="1QY4LMFZS-1VJDNM3-8Y7" x="335" y="350" width="66" height="41"/>
+            <concept-appearance id="1QY4LHN47-15FNJ6C-8NG" x="324" y="220" width="87" height="40"/>
+            <concept-appearance id="1QY4LH2NC-2D0NLK0-8L8" x="310" y="100" width="59" height="38"/>
+            <concept-appearance id="1QY4LKPJJ-1T5BV86-8T0" x="634" y="247" width="179" height="42"/>
+            <concept-appearance id="1QY4LPRCF-1BT4QKN-92V" x="562" y="461" width="54" height="25"/>
+            <concept-appearance id="1QY4LLN2Z-1RG1DTM-8VV" x="90" y="355" width="89" height="25"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase-appearance id="1QY4LMWJ0-N1KRBN-904" x="455" y="357" width="23" height="11"/>
+            <linking-phrase-appearance id="1QY4LH2NF-11ZW3MH-8LC" x="196" y="164" width="28" height="28"/>
+            <linking-phrase-appearance id="1QY4LLN31-1LDHXCL-8VY" x="84" y="260" width="148" height="14"/>
+            <linking-phrase-appearance id="1QY4LJZXZ-QV9JBB-8R3" x="454" y="218" width="23" height="11"/>
+            <linking-phrase-appearance id="1QY4LMFZV-1QH7NP7-8YB" x="212" y="352" width="28" height="28"/>
+        </linking-phrase-appearance-list>
+        <connection-appearance-list>
+            <connection-appearance id="1QY4LLN32-14PCMM-8W6" from-pos="center" to-pos="center" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LJZY0-1WS36H1-8R6" from-pos="center" to-pos="center" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LH2QV-5BQFCG-8LH" from-pos="center" to-pos="center" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LKPJK-1GQY215-8T3" from-pos="center" to-pos="left" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LP6N4-1WJ7T7B-91M" from-pos="center" to-pos="center" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LLN32-K2508V-8W1" from-pos="center" to-pos="center" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LHN49-1JFP3QF-8NK" from-pos="center" to-pos="center" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LJZY1-SKQWLJ-8RD" from-pos="center" to-pos="center" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LPRCH-1QW0P04-92Y" from-pos="center" to-pos="left" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LMFZW-NMMFFH-8YM" from-pos="center" to-pos="center" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LH2QV-2B09NYP-8LP" from-pos="center" to-pos="center" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LMFZW-G48CR5-8YF" from-pos="center" to-pos="center" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LMWJ1-1Y8S7R9-907" from-pos="center" to-pos="center" arrowhead="if-to-concept"/>
+            <connection-appearance id="1QY4LMWJ2-1WQZJ61-90F" from-pos="left" to-pos="center" arrowhead="if-to-concept"/>
+        </connection-appearance-list>
+        <style-sheet-list>
+            <style-sheet id="_Default_">
+                <map-style background-color="255,255,255,0"/>
+                <concept-style font-name="Verdana" font-size="12" font-style="plain" font-color="0,0,0,255" text-margin="4" background-color="237,244,246,255" background-image-style="full" border-color="0,0,0,255" border-style="solid" border-thickness="1"
+                    border-shape="rounded-rectangle" border-shape-rrarc="15.0" text-alignment="center" shadow-color="none" min-width="-1" min-height="-1" max-width="-1.0"/>
+                <linking-phrase-style font-name="Verdana" font-size="12" font-style="plain" font-color="0,0,0,255" text-margin="1" background-color="0,0,255,0" background-image-style="full" border-color="0,0,0,0" border-style="solid" border-thickness="1"
+                    border-shape="rectangle" border-shape-rrarc="15.0" text-alignment="center" shadow-color="none"/>
+                <connection-style color="0,0,0,255" style="solid" thickness="1" type="straight" arrowhead="if-to-concept-and-slopes-up"/>
+                <resource-style font-name="SanSerif" font-size="12" font-style="plain" font-color="0,0,0,255" background-color="192,192,192,255"/>
+            </style-sheet>
+            <style-sheet id="_LatestChanges_">
+                <connection-style arrowhead="if-to-concept"/>
+            </style-sheet>
+        </style-sheet-list>
+        <extra-graphical-properties-list>
+            <properties-list id="1R8K0Q6M1-Z7PM17-B7">
+                <property key="StyleSheetGroup_0" value="//*@!#$%%^&amp;*()() No Grouped StyleSheets @"/>
+            </properties-list>
+        </extra-graphical-properties-list>
+    </map>
+</cmap>
