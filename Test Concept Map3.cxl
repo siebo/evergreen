@@ -23,40 +23,47 @@
                 <vcard:Orgname>Company, Inc.</vcard:Orgname>
             </vcard:ORG>
         </dcterms:rightsHolder>
-        <dcterms:created>2017-04-13T23:28:24-07:00</dcterms:created>
+        <dcterms:created>2017-04-27T20:38:54-07:00</dcterms:created>
         <dcterms:modified>2017-04-13T23:28:24-07:00</dcterms:modified>
         <dc:language>en</dc:language>
         <dc:format>x-cmap/x-storable</dc:format>
-        <dc:publisher>FIHMC CmapTools 6.02</dc:publisher>
-        <dc:extent>3480 bytes</dc:extent>
-
+        <dc:publisher>FIHMC CmapTools 6.00.4</dc:publisher>
+        <dc:extent>15686 bytes</dc:extent>
+        <dc:source>cmap:1MHZH5RK6-2C8DRLF-1:1QQ3Y21KN-1DZH998-8RG:1R8N93WGF-2C83XNS-2BTZTC</dc:source>
     </res-meta>
-    <map width="195" height="136">
+<!--    Note the ID's used in the map are just arbitrary integers, whose scope does not extend outside of the map-->
+    <map width="249" height="188">
         <concept-list>
             <concept id="1" label="People"/>
-            <concept id="2" label="Food"/>
             <concept id="3" label="Drink"/>
+            <concept id="2" label="Food"/>
+            <concept id="10" label="Fat"/>
         </concept-list>
         <linking-phrase-list>
-            <linking-phrase id="4" label="Eaten By"/>
             <linking-phrase id="5" label="Drunk By"/>
+            <linking-phrase id="4" label="Eaten By"/>
         </linking-phrase-list>
         <connection-list>
+            <connection id="9" from-id="5" to-id="1"/>
             <connection id="6" from-id="2" to-id="4"/>
-            <connection id="7" from-id="3" to-id="5"/>
             <connection id="8" from-id="4" to-id="1"/>
+            <connection id="7" from-id="3" to-id="5"/>
         </connection-list>
         <concept-appearance-list>
             <concept-appearance id="1" x="282" y="275" width="56" height="28"/>
+            <concept-appearance id="10" x0="222" y="205" width="56" height="28"/>
+            <concept-appearance id="3" x="202" y="116" width="48" height="25"/>
             <concept-appearance id="2" x="140" y="168" width="45" height="25"/>
         </concept-appearance-list>
         <linking-phrase-appearance-list>
+            <linking-phrase-appearance id="5" x="335" y="189" width="58" height="14"/>
             <linking-phrase-appearance id="4" x="211" y="221" width="56" height="13"/>
-            
         </linking-phrase-appearance-list>
         <connection-appearance-list>
-            <connection-appearance id="6" from-pos="center" to-pos="center"/>
-            <connection-appearance id="8" from-pos="center" to-pos="center"/>
+            <connection-appearance id="9" from-pos="right" to-pos="left" arrowhead="if-to-concept"/>
+            <connection-appearance id="6" from-pos="right" to-pos="left" arrowhead="if-to-concept"/>
+            <connection-appearance id="8" from-pos="right" to-pos="left" arrowhead="if-to-concept"/>
+            <connection-appearance id="7" from-pos="right" to-pos="left" arrowhead="if-to-concept"/>
         </connection-appearance-list>
         <style-sheet-list>
             <style-sheet id="_Default_">
@@ -68,9 +75,12 @@
                 <connection-style color="0,0,0,255" style="solid" thickness="1" type="straight" arrowhead="if-to-concept-and-slopes-up"/>
                 <resource-style font-name="SanSerif" font-size="12" font-style="plain" font-color="0,0,0,255" background-color="192,192,192,255"/>
             </style-sheet>
+            <style-sheet id="_LatestChanges_">
+                <connection-style arrowhead="if-to-concept"/>
+            </style-sheet>
         </style-sheet-list>
         <extra-graphical-properties-list>
-            <properties-list id="1R78ZVLF0-12L4C3Z-NR">
+            <properties-list id="1R8MWPYVL-95YB6B-2BMMMQ">
                 <property key="StyleSheetGroup_0" value="//*@!#$%%^&amp;*()() No Grouped StyleSheets @"/>
             </properties-list>
         </extra-graphical-properties-list>
