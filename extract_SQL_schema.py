@@ -14,20 +14,20 @@ import argparse
 # INPUT: Connection object that is connected to the database instance
 # OUTPUT: pandas dataframe representing SQL Schema columns, types, and table names
 # Pulls out table names, constraints, and attributes and returns a dataframe with that information
-def parseSchema(connection, schemaName):
+def parseSchema(connection):
   cur= connection.cursor()
   
   # Selecting attributes that do not have constraints
   queryAttributes = """
   SELECT ic.table_catalog, ic.table_schema, ic.table_name, ic.column_name
   FROM information_schema.columns as ic
-  WHERE ic.table_schema = %s AND
+  WHERE
   NOT EXISTS (SELECT ic.column_name FROM information_schema.key_column_usage as kcu WHERE kcu.column_name = ic.column_name) AND ic.table_schema NOT LIKE 'information_schema' AND ic.table_schema NOT LIKE 'pg_catalog'
-  """ # MAKE SURE TO REMOVE TABLE NAME SELECTION AT THE END ^
-  cur.execute(queryAttributes,(schemaName,))
+  """ 
+  cur.execute(queryAttributes)
   rows=cur.fetchall()
   schemaInfoDF = pd.DataFrame(rows, columns=['Database', 'Schema', 'Table_Name', 'Column_Name'])
-  schemaInfoDF['Type'] = "attribute"
+  schemaInfoDF['Type'] = "ATTRIBUTE"
   
   # SELECTING other constraints (primary keys and unique)
   queryConstraints = """
@@ -35,9 +35,9 @@ def parseSchema(connection, schemaName):
   FROM information_schema.table_constraints tc
   JOIN information_schema.key_column_usage kcu ON tc.constraint_name = kcu.constraint_name
   JOIN information_schema.constraint_column_usage ccu ON ccu.constraint_name = tc.constraint_name
-  WHERE constraint_type NOT LIKE 'FOREIGN KEY' AND tc.table_schema = %s
+  WHERE constraint_type NOT LIKE 'FOREIGN KEY'
   """ 
-  cur.execute(queryConstraints, (schemaName,))
+  cur.execute(queryConstraints)
   rowsConstraints = cur.fetchall()
   schemaInfoDFConstraints = pd.DataFrame(rowsConstraints, columns=['Database', 'Schema', 'Table_Name', 'Column_Name', 'Type'])
   
@@ -48,10 +48,10 @@ def parseSchema(connection, schemaName):
   FROM information_schema.table_constraints tc
   JOIN information_schema.key_column_usage kcu ON tc.constraint_name = kcu.constraint_name
   JOIN information_schema.constraint_column_usage ccu ON ccu.constraint_name = tc.constraint_name
-  WHERE constraint_type = 'FOREIGN KEY' and tc.table_schema = %s
+  WHERE constraint_type = 'FOREIGN KEY'
   """
   
-  cur.execute(queryForeign,(schemaName,))
+  cur.execute(queryForeign)
   rowsForeign = cur.fetchall()
 
   # Foreign key attributes have a special format to denote table and column they're connected to
@@ -71,14 +71,15 @@ def parseSchema(connection, schemaName):
 def main():
   parser = argparse.ArgumentParser(description="Converts all SQl Schema layouts from a user-specified Postgres database into a formatted csv.")
   parser.add_argument("db", help="Database name from the server you are accessing.")
-  parser.add_argument("--user", default="postgres", help="Username for the server you are accessing. (Default is postgres)")
-  parser.add_argument("--host", default="localhost", help="Host-name/address for the server. (Default is localhost)" )
-  parser.add_argument("--password")
-  parser.add_argument("--output", default="out1.csv", help="File name for the output, make sure it ends with .csv (Default is out1.csv)")
+  parser.add_argument("-user", default="postgres", help="Username for the server you are accessing. (Default is postgres)")
+  parser.add_argument("-host", default="localhost", help="Host-name/address for the server. (Default is localhost)" )
+  parser.add_argument("-password")
+  parser.add_argument("-output", default="out1.csv", help="File name for the output, make sure it ends with .csv (Default is out1.csv)")
+  parser.add_argument("-port", default=5432, help="Port for the host (Default is 5432)")
   
   db_Parameters = parser.parse_args()
-  conn = pg.connect(database=db_Parameters.db, user=db_Parameters.user, password="megawish", host=db_Parameters.host)
-  sqlSchemaDF = parseSchema(conn, 'Lecture5')
+  conn = pg.connect(database=db_Parameters.db, user=db_Parameters.user, password="megawish", host=db_Parameters.host, port=db_Parameters.port)
+  sqlSchemaDF = parseSchema(conn)
   conn.close()
   sqlSchemaDF.to_csv(db_Parameters.output, index=False)
 
