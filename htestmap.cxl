@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns:dcterms="http://purl.org/dc/terms/" xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+    <res-meta>
+        <dc:title>testcmap</dc:title>
+        <dc:creator>
+            <vcard:FN>Harrison Nguyen</vcard:FN>
+            <vcard:EMAIL>hhnguy@ucdavis.edu</vcard:EMAIL>
+        </dc:creator>
+        <dc:contributor>
+            <vcard:FN>Harrison Nguyen</vcard:FN>
+            <vcard:EMAIL>hhnguy@ucdavis.edu</vcard:EMAIL>
+        </dc:contributor>
+        <dcterms:rightsHolder>
+            <vcard:FN>Harrison Nguyen</vcard:FN>
+            <vcard:EMAIL>hhnguy@ucdavis.edu</vcard:EMAIL>
+        </dcterms:rightsHolder>
+        <dcterms:created>2018-03-15T23:28:16-07:00</dcterms:created>
+        <dcterms:modified>2018-03-15T23:28:15-07:00</dcterms:modified>
+        <dc:language>en</dc:language>
+        <dc:format>x-cmap/x-storable</dc:format>
+        <dc:publisher>FIHMC CmapTools 6.03</dc:publisher>
+        <dc:extent>56611 bytes</dc:extent>
+        <dc:source>cmap:1MHZH5RK6-2C8DRLF-1:uid=d8c2d476-ebe4-4cde-a2f3-a7a92d2beef5,ou=users,dc=cmapcloud,dc=ihmc,dc=us:1S8ZZT7M2-1LQBR3G-94</dc:source>
+    </res-meta>
+    <map width="608" height="365">
+        <concept-list>
+            <concept id="1S8ZZX5CF-8KKRHT-LJ" label="name" short-comment="var char 50" long-comment="attribute"/>
+            <concept id="1S8ZZTD87-DS0LS7-DG" label="id" short-comment="integer" long-comment="attribute"/>
+            <concept id="1S8ZZTCJT-1QZKTXN-9C" label="patient" short-comment="" long-comment="relation"/>
+            <concept id="1S8ZZVN66-SC0DN8-HC" label="med record number" short-comment="integer" long-comment="attribute"/>
+            <concept id="1S9000DT7-NQGR6L-V7" label="weight" short-comment="integer" long-comment="attribute"/>
+            <concept id="1S9006GJB-247QQGJ-17Y" label="mrn" short-comment="integer" long-comment="attribute"/>
+            <concept id="1S9002XBV-1GSHRB5-11T" label="medical record&#xa;" short-comment="" long-comment="relation"/>
+            <concept id="1S900078C-FCVY8V-TC" label="height " short-comment="integer" long-comment="attribute"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="1S9008V3C-GG23LD-1FK" label="references"/>
+            <linking-phrase id="1S8ZZTJ8X-20FHQ5V-DX" label="has attributes"/>
+            <linking-phrase id="1S9004Y67-1GBGWYS-168" label="has attributes"/>
+            <linking-phrase id="1S8ZZYYMQ-4DG5X7-QK" label="primary key"/>
+            <linking-phrase id="1S90087HM-DT3W0J-1D6" label="foreign key"/>
+            <linking-phrase id="1S9007TXP-2D6P55X-1C0" label="primary key"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection id="1S8ZZTJ8Z-11RF0GB-F7" from-id="1S8ZZTJ8X-20FHQ5V-DX" to-id="1S8ZZTD87-DS0LS7-DG"/>
+            <connection id="1S9004Y68-2B51J6N-16C" from-id="1S9002XBV-1GSHRB5-11T" to-id="1S9004Y67-1GBGWYS-168"/>
+            <connection id="1S9006GJD-2BLGRBC-181" from-id="1S9004Y67-1GBGWYS-168" to-id="1S9006GJB-247QQGJ-17Y"/>
+            <connection id="1S9008V3D-PSJ2ZN-1FT" from-id="1S9008V3C-GG23LD-1FK" to-id="1S9002XBV-1GSHRB5-11T"/>
+            <connection id="1S8ZZYYMS-23SWTJX-QT" from-id="1S8ZZYYMQ-4DG5X7-QK" to-id="1S8ZZTD87-DS0LS7-DG"/>
+            <connection id="1S8ZZX5CG-22PGPQG-LM" from-id="1S8ZZTJ8X-20FHQ5V-DX" to-id="1S8ZZX5CF-8KKRHT-LJ"/>
+            <connection id="1S9007TXQ-1PDX5B6-1C3" from-id="1S9002XBV-1GSHRB5-11T" to-id="1S9007TXP-2D6P55X-1C0"/>
+            <connection id="1S90087HN-1PLQVC7-1D9" from-id="1S8ZZVN66-SC0DN8-HC" to-id="1S90087HM-DT3W0J-1D6"/>
+            <connection id="1S9008V3D-1N2G364-1FN" from-id="1S8ZZVN66-SC0DN8-HC" to-id="1S9008V3C-GG23LD-1FK"/>
+            <connection id="1S8ZZYYMR-214Z32N-QN" from-id="1S8ZZTCJT-1QZKTXN-9C" to-id="1S8ZZYYMQ-4DG5X7-QK"/>
+            <connection id="1S9004Y69-1VZR11H-16K" from-id="1S9004Y67-1GBGWYS-168" to-id="1S900078C-FCVY8V-TC"/>
+            <connection id="1S8ZZTJ8Y-1W3VYRG-F1" from-id="1S8ZZTCJT-1QZKTXN-9C" to-id="1S8ZZTJ8X-20FHQ5V-DX"/>
+            <connection id="1S90087HN-7C2WZL-1DG" from-id="1S90087HM-DT3W0J-1D6" to-id="1S9006GJB-247QQGJ-17Y"/>
+            <connection id="1S8ZZVN69-1Q951CP-HG" from-id="1S8ZZTJ8X-20FHQ5V-DX" to-id="1S8ZZVN66-SC0DN8-HC"/>
+            <connection id="1S9007TXQ-13Y4CXY-1C8" from-id="1S9007TXP-2D6P55X-1C0" to-id="1S9006GJB-247QQGJ-17Y"/>
+            <connection id="1S90052J7-6FX92Y-16Z" from-id="1S9004Y67-1GBGWYS-168" to-id="1S9000DT7-NQGR6L-V7"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1S8ZZX5CF-8KKRHT-LJ" x="334" y="113" width="50" height="23"/>
+            <concept-appearance id="1S8ZZTD87-DS0LS7-DG" x="100" y="219" width="27" height="25"/>
+            <concept-appearance id="1S8ZZTCJT-1QZKTXN-9C" x="171" y="62" width="58" height="27" min-width="0" min-height="3"/>
+            <concept-appearance id="1S8ZZVN66-SC0DN8-HC" x="222" y="210" width="136" height="25" min-width="90" min-height="3"/>
+            <concept-appearance id="1S9000DT7-NQGR6L-V7" x="573" y="387" width="56" height="28"/>
+            <concept-appearance id="1S9006GJB-247QQGJ-17Y" x="298" y="392" width="40" height="23"/>
+            <concept-appearance id="1S9002XBV-1GSHRB5-11T" x="567" y="175" width="105" height="42"/>
+            <concept-appearance id="1S900078C-FCVY8V-TC" x="430" y="390" width="58" height="28"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase-appearance id="1S9008V3C-GG23LD-1FK" x="374" y="202" width="65" height="11"/>
+            <linking-phrase-appearance id="1S8ZZTJ8X-20FHQ5V-DX" x="168" y="137" width="86" height="18" min-width="18" min-height="22"/>
+            <linking-phrase-appearance id="1S9004Y67-1GBGWYS-168" x="540" y="302" width="86" height="14" min-width="14" min-height="24"/>
+            <linking-phrase-appearance id="1S8ZZYYMQ-4DG5X7-QK" x="51" y="116" width="75" height="14"/>
+            <linking-phrase-appearance id="1S90087HM-DT3W0J-1D6" x="197" y="303" width="70" height="14"/>
+            <linking-phrase-appearance id="1S9007TXP-2D6P55X-1C0" x="320" y="302" width="75" height="14"/>
+        </linking-phrase-appearance-list>
+        <connection-appearance-list>
+            <connection-appearance id="1S8ZZTJ8Z-11RF0GB-F7" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S9004Y68-2B51J6N-16C" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S9006GJD-2BLGRBC-181" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S9008V3D-PSJ2ZN-1FT" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S8ZZYYMS-23SWTJX-QT" from-pos="center" to-pos="top"/>
+            <connection-appearance id="1S8ZZX5CG-22PGPQG-LM" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S9007TXQ-1PDX5B6-1C3" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S90087HN-1PLQVC7-1D9" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S9008V3D-1N2G364-1FN" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S8ZZYYMR-214Z32N-QN" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S9004Y69-1VZR11H-16K" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S8ZZTJ8Y-1W3VYRG-F1" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S90087HN-7C2WZL-1DG" from-pos="center" to-pos="top-left"/>
+            <connection-appearance id="1S8ZZVN69-1Q951CP-HG" from-pos="center" to-pos="center"/>
+            <connection-appearance id="1S9007TXQ-13Y4CXY-1C8" from-pos="center" to-pos="top"/>
+            <connection-appearance id="1S90052J7-6FX92Y-16Z" from-pos="center" to-pos="center"/>
+        </connection-appearance-list>
+        <style-sheet-list>
+            <style-sheet id="_Default_">
+                <map-style background-color="255,255,255,0" image-style="full" image-top-left="0,0"/>
+                <concept-style font-name="Verdana" font-size="12" font-style="plain" font-color="0,0,0,255" text-margin="4" background-color="237,244,246,255" background-image-style="full" border-color="0,0,0,255" border-style="solid" border-thickness="1"
+                    border-shape="rounded-rectangle" border-shape-rrarc="15.0" text-alignment="center" shadow-color="none" min-width="-1" min-height="-1" max-width="-1.0" group-child-spacing="10" group-parent-spacing="10"/>
+                <linking-phrase-style font-name="Verdana" font-size="12" font-style="plain" font-color="0,0,0,255" text-margin="1" background-color="0,0,255,0" background-image-style="full" border-color="0,0,0,0" border-style="solid" border-thickness="1"
+                    border-shape="rectangle" border-shape-rrarc="15.0" text-alignment="center" shadow-color="none" min-width="-1" min-height="-1" max-width="-1.0" group-child-spacing="10" group-parent-spacing="10"/>
+                <connection-style color="0,0,0,255" style="solid" thickness="1" type="straight" arrowhead="if-to-concept-and-slopes-up"/>
+                <resource-style font-name="SanSerif" font-size="12" font-style="plain" font-color="0,0,0,255" background-color="192,192,192,255"/>
+            </style-sheet>
+        </style-sheet-list>
+        <extra-graphical-properties-list>
+            <properties-list id="1S8ZZT7M2-1LQBR3G-94">
+                <property key="StyleSheetGroup_0" value="//*@!#$%%^&amp;*()() No Grouped StyleSheets @"/>
+            </properties-list>
+        </extra-graphical-properties-list>
+    </map>
+</cmap>
